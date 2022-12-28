@@ -62,7 +62,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <a class="navbar-brand" href="home.php"><img src="logo.png"
+                    style="height: 40px; width: 55px; margin-right: 10px" alt="logo">CS
+                Cloud</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="ti-menu"></span>
@@ -123,6 +125,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     </h1>
                     <p class="text-white mb-5">Upload Your files on Firebase</p>
 
+                    <button class="bn54 upload"><span class="bn54span">Upload</span></button>
+
                 </div>
                 <div class="col-md-6 text-center order-1 order-md-2">
                     <img class="img-fluid" src="images/mobile.png" alt="screenshot">
@@ -138,13 +142,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="row">
                     <div class="col-lg-12 col-md-12 mt-5 mt-md-0 text-center">
                         <div class="form-outline mb-4">
-                            <!-- <button class="bn54 upload"><span class="bn54span">Upload</span></button> -->
-                            <div class="uploadOuter">
-                                <span class="dragBox">
-                                    Darg and Drop image here
-                                    <input type="file" ondragover="drag()" ondrop="drop()" id="uploadFile" />
-                                </span>
-                            </div>
+
                             <div id="preview"></div>
 
                             <div class="upload-area">
@@ -205,17 +203,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="row">
                     <div class="col-lg-12 col-md-12 m-md-auto align-self-center">
                         <div class="block">
-                            <a href="index.html"><img src="images/logo-alt.png" alt="footer-logo"></a>
+                            <a href="index.html"><img src="logo.png" alt="footer-logo"></a>
                             <!-- Social Site Icons -->
                             <ul class="social-icon list-inline">
                                 <li class="list-inline-item">
-                                    <a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
+                                    <a href="#"><i class="ti-facebook"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
+                                    <a href="#"><i class="ti-twitter"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
+                                    <a href="#"><i class="ti-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -228,7 +226,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             <small class="text-secondary">Copyright &copy;
                 <script>
                 document.write(new Date().getFullYear())
-                </script>. Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a>
+                </script>. Designed &amp; Developed by <a href="#">CS Cloud</a>
             </small class="text-secondary">
         </div>
     </footer>

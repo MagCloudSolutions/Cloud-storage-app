@@ -330,34 +330,48 @@ body {
   }
 }
 
-.uploadOuter {
-  text-align: center;
-  padding: 20px;
-}
-.dragBox {
-  width: 250px;
-  height: 100px;
-  margin: 0 auto;
+.file-drop-area {
   position: relative;
-  text-align: center;
-  font-weight: bold;
-  line-height: 95px;
-  color: #999;
-  border: 2px dashed #ccc;
-  display: inline-block;
-  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  max-width: 100%;
+  padding: 25px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  transition: 0.2s;
 }
-input[type="file"] {
+
+.choose-file-button {
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-message {
+  font-size: small;
+  font-weight: 300;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-input {
   position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
+  cursor: pointer;
   opacity: 0;
-  top: 0;
-  left: 0;
 }
-.draging {
-  transform: scale(1.1);
-}
-#preview {
-  text-align: center;
+
+.mt-100 {
+  margin-top: 100px;
 }

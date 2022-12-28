@@ -12,8 +12,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 // get dom in variables
-// var upload = document.getElementsByClassName("upload")[0];
-var hiddenBtn = document.getElementsByID("uploadFile");
+var upload = document.getElementsByClassName("upload")[0];
+var hiddenBtn = document.getElementsByClassName("hidden-upload-btn")[0];
 var progress = document.getElementsByClassName("progress")[0];
 var percent = document.getElementsByClassName("percent")[0];
 var pause = document.getElementsByClassName("pause")[0];
@@ -21,9 +21,9 @@ var resume = document.getElementsByClassName("resume")[0];
 var cancel = document.getElementsByClassName("cancel")[0];
 
 // create function for select a file
-// upload.onclick = function () {
-//   hiddenBtn.click();
-// };
+upload.onclick = function () {
+  hiddenBtn.click();
+};
 
 // also store files path in localstorage or in database for further use
 if (!localStorage.getItem("uploaded-metadata")) {
@@ -32,7 +32,7 @@ if (!localStorage.getItem("uploaded-metadata")) {
 }
 
 // get selected file and upload function
-hiddenBtn.onChange = function () {
+hiddenBtn.onchange = function () {
   // get file
   var file = hiddenBtn.files[0];
   // change file name so cannot overwrite
@@ -113,25 +113,25 @@ function showFilesList() {
     var path = data[i];
     if (folder_name == "video") {
       document.getElementById("video").innerHTML += `
-              <li data-name="${path}">
-                  <span class="form-label" >${file_name}</span>
-                  <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-              </li>
-              `;
+            <li data-name="${path}">
+                <span class="form-label" >${file_name}</span>
+                <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+            </li>
+            `;
     } else if (folder_name == "audio") {
       document.getElementById("audio").innerHTML += `
-              <li data-name="${path}">
-                  <span class="form-label" >${file_name}</span>
-                  <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-              </li>
-              `;
+            <li data-name="${path}">
+                <span class="form-label" >${file_name}</span>
+                <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+            </li>
+            `;
     } else {
       document.getElementById("image").innerHTML += `
-              <li data-name="${path}">
-                  <span class="form-label" >${file_name}</span>
-                  <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-              </li>
-              `;
+            <li data-name="${path}">
+                <span class="form-label" >${file_name}</span>
+                <svg onclick="expand(this)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+            </li>
+            `;
     }
   }
 }
@@ -144,9 +144,9 @@ function expand(v) {
     expandContainer.style.display = "block";
     expandContainerUl.style.display = "block";
     loader.style.display = "none";
-    // expandContainer.style.left =
-    //   click_position.left + window.scrollX - 85 + "px";
-    // expandContainer.style.top = click_position.top + window.scrollY + 25 + "px";
+    expandContainer.style.left =
+      click_position.left + window.scrollX - 85 + "px";
+    expandContainer.style.top = click_position.top + window.scrollY + 25 + "px";
     expandContainer.setAttribute("data-value", "1");
     expandContainerUl.setAttribute("data-file-name", path);
     v.setAttribute("id", "temp-id");
@@ -258,21 +258,4 @@ function deleteFile(v) {
     .catch((error) => {
       console.log(error);
     });
-}
-
-// ("use strict");
-// function dragNdrop(event) {
-//   var fileName = URL.createObjectURL(event.target.files[0]);
-//   var preview = document.getElementById("preview");
-//   var previewImg = document.createElement("img");
-//   previewImg.setAttribute("src", fileName);
-//   preview.innerHTML = "";
-//   preview.appendChild(previewImg);
-// }
-function drag() {
-  document.getElementById("uploadFile").parentNode.className =
-    "draging dragBox";
-}
-function drop() {
-  document.getElementById("uploadFile").parentNode.className = "dragBox";
 }
