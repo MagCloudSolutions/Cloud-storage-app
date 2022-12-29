@@ -62,8 +62,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
     <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
         <div class="container">
-            <a class="navbar-brand" href="home.php"><img src="logo.png"
-                    style="height: 40px; width: 55px; margin-right: 10px" alt="logo">CS
+            <a class="navbar-brand" href="home.php"><img src="photos/mag.png"
+                    style="height: 50px; width: 55px; margin-right: 10px" alt="logo">Mag
                 Cloud</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,10 +78,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                     <li class="nav-item @@about">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item @@contact">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -129,7 +129,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
                 </div>
                 <div class="col-md-6 text-center order-1 order-md-2">
-                    <img class="img-fluid" src="images/mobile.png" alt="screenshot">
+                    <img class="img-fluid" src="photos/backgroud.png" alt="screenshot">
                 </div>
             </div>
         </div>
@@ -198,35 +198,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 
     <footer>
-        <div class="footer-main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 m-md-auto align-self-center">
-                        <div class="block">
-                            <a href="index.html"><img src="logo.png" alt="footer-logo"></a>
-                            <!-- Social Site Icons -->
-                            <ul class="social-icon list-inline">
-                                <li class="list-inline-item">
-                                    <a href="#"><i class="ti-facebook"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#"><i class="ti-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#"><i class="ti-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="text-center bg-dark py-4">
+        <div class="text-center bg-dark py-4"><img src="photos/mag.png" alt="footer-logo"
+                style="height: 38px; width: 41px;">
             <small class="text-secondary">Copyright &copy;
                 <script>
                 document.write(new Date().getFullYear())
-                </script>. Designed &amp; Developed by <a href="#">CS Cloud</a>
+                </script>. Designed &amp; Developed by <a href="#">Mag Cloud</a>
             </small class="text-secondary">
         </div>
     </footer>

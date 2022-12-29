@@ -12,6 +12,7 @@
 .body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='3840' height='2400' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1191%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1192)'%3e%3c/rect%3e%3cpath d='M1248.096%2c547.293C1264.608%2c547.653%2c1283.268%2c547.028%2c1292.078%2c533.058C1301.285%2c518.459%2c1296.624%2c499.56%2c1287.395%2c484.975C1278.844%2c471.462%2c1264.085%2c463.825%2c1248.096%2c463.551C1231.568%2c463.268%2c1214.926%2c469.43%2c1206.392%2c483.587C1197.607%2c498.162%2c1197.99%2c516.973%2c1207.311%2c531.212C1215.89%2c544.317%2c1232.437%2c546.952%2c1248.096%2c547.293' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M552.8025574693352 323.68554894902735L698.7340188669864 217.87247800995118 555.9248253862366 151.2794574349387z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M-46.72 268.76 a180.29 180.29 0 1 0 360.58 0 a180.29 180.29 0 1 0 -360.58 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M680.72 465.78 a113.84 113.84 0 1 0 227.68 0 a113.84 113.84 0 1 0 -227.68 0z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1199.992%2c750.339C1245.857%2c750.635%2c1281.343%2c715.834%2c1305.072%2c676.583C1329.879%2c635.551%2c1347.732%2c585.964%2c1324.836%2c543.836C1301.161%2c500.276%2c1249.57%2c483.31%2c1199.992%2c483.242C1150.276%2c483.174%2c1098.013%2c499.66%2c1074.554%2c543.493C1052.017%2c585.603%2c1072.47%2c634.403%2c1097.236%2c675.241C1120.814%2c714.12%2c1154.523%2c750.046%2c1199.992%2c750.339' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M654.562642758015 539.2457276661743L693.0744948616632 469.76850732724296 569.6027383014421 446.7393393412366z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1191'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='139.29%25' x2='84.72%25' y2='-39.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1192'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 8%2c 18%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
   height: 100%;
+  margin-bottom: 50px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -20,8 +21,13 @@
 }
 
 .form-label {
-  color: rgb(218, 206, 206);
+  color: aliceblue;
 }
+
+.form-label1 {
+  color: #000000;
+}
+
 .btn1 {
   /* background-color: black; */
   color: antiquewhite;
@@ -374,4 +380,14 @@ body {
 
 .mt-100 {
   margin-top: 100px;
+}
+
+#footer {
+  position: fixed;
+  height: 50px;
+  background-color: red;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 25px;
 }

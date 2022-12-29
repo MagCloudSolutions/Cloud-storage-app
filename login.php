@@ -8,7 +8,6 @@ $passwordError = false;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   include "partial/config.php";
-  $name = $_POST['name'];
   $email = $_POST['email'];
   $password = $_POST['password'];
 
@@ -67,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" href="mag.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> -->
 
     <!-- PLUGINS CSS STYLE -->
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
@@ -92,39 +92,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($showError) {
       echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Error!</strong>&nbsp;Invalid Credentials
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong>Error!</strong>&nbsp;Invalid Credentials!&nbsp;
+        <a href="login.php" style="color:blue;">Try Again</a>
             </div>';
     }
     if ($passwordError) {
       echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong>&nbsp;Incorrect Password.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong>Error!</strong>&nbsp;Incorrect Password!&nbsp;
+        <a href="login.php" style="color:blue;">Try Again</a>
             </div>';
     }
     if ($mailIDerror) {
       echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error!</strong>&nbsp;Email not verified please check your mail inbox.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
     }
     ?>
-    <section class="user-login section">
+    <section class="user-login section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="block">
                         <!-- Image -->
-                        <div class="image align-self-center">
-                            <img class="img-fluid" src="images/Login/front-desk-sign-in.jpg" alt="desk-image" />
+                        <div class="image align-self-left">
+                            <img class="img-fluid" src="photos/girl-.png" alt="desk-image" />
                         </div>
                         <!-- Content -->
-                        <div class="content text-center">
+                        <div class="content text-center shadow-box">
                             <div class="logo">
-                                <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                                <a class="navbar-brand" href="home.php"><img src="photos/mag.png"
+                                        style="height: 160px; width: 145px; margin-right: 10px" alt="logo"></a>
                             </div>
                             <div class="title-text">
-                                <h3>Sign in to To Your Account</h3>
+                                <h3>Sign-in To Your Account</h3>
                             </div>
                             <form action="login.php" method="post">
                                 <!-- Username -->
@@ -139,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="new-acount">
                                 <a href="contact.html">Forget your password?</a>
                                 <p>
-                                    Don't Have an account? <a href="sign-up.php"> SIGN UP</a>
+                                    Don't Have an account? <a href="register.php"> SIGN UP</a>
                                 </p>
                             </div>
                         </div>

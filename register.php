@@ -39,7 +39,7 @@ function sendMail($email, $verification_code)
       </br>
       <h7>Click the link below to verift your email address.</h7>
       </br>
-      <a href = "http://localhost/cs-cloud/otp.php?email=' . $email . '&verification_code=' . $verification_code . '" >Verify</a>';
+      <a href = "http://localhost/theme/otp.php?email=' . $email . '&verification_code=' . $verification_code . '" >Verify</a>';
 
     $mail->send();
     return true;
@@ -111,7 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" href="mag.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> -->
 
     <!-- PLUGINS CSS STYLE -->
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
@@ -127,46 +128,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <?php
-    if ($showAlert) {
-      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Success!</strong>&nbsp;Account created successfully
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  if ($showAlert) {
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success!</strong>&nbsp;Account created successfully!&nbsp;Click Here to 
+          <a href="login.php" style="color:blue;">Login</a>
         </div>';
-    }
+  }
 
-    if ($emailError) {
+  if ($emailError) {
 
-      echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-      <strong>Error!</strong>&nbsp;Email already Exist
-          <button type="button" id="emailExist" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Error!</strong>&nbsp;Email already Exist!&nbsp;Click Here to
+      <a href="login.php" style="color:blue;">Login</a>
         </div>';
-    }
-    if ($passwordError) {
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Error!</strong>&nbsp;Password Do not match
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  }
+  if ($passwordError) {
+    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Error!</strong>&nbsp;Password Do not match!&nbsp;Click Here to 
+      <a href="register.php" style="color:blue;">Try Again</a>
         </div>';
-    }
-    if ($internalError) {
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Error!</strong>&nbsp;System ran into some problem
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  }
+  if ($internalError) {
+    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Error!</strong>&nbsp;System ran into some problem!&nbsp;Click Here to 
+      <a href="register.php" style="color:blue;">Refresh</a>
         </div>';
-    }
-    ?>
-    <section class="user-login section">
+  }
+  ?>
+    <section class="user-login section py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="block">
                         <!-- Image -->
                         <div class="image align-self-center">
-                            <img class="img-fluid" src="images/Login/sign-up.jpg" alt="desk-image" />
+                            <img class="img-fluid" src="photos/girl-.png" alt="desk-image" />
                         </div>
                         <!-- Content -->
                         <div class="content text-center">
                             <div class="logo">
-                                <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                                <a class="navbar-brand" href="home.php"><img src="photos/mag.png"
+                                        style="height: 160px; width: 145px;" alt="logo" /></a>
                             </div>
                             <div class="title-text">
                                 <h3>Sign Up for New Account</h3>
@@ -192,7 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <a href="privacy-policy.html">Terms of Conditions.</a>
                                 </p>
                                 <p>
-                                    Anready have an account? <a href="sign-in.php">SIGN IN</a>
+                                    Anready have an account? <a href="login.php">SIGN IN</a>
                                 </p>
                             </div>
                         </div>
